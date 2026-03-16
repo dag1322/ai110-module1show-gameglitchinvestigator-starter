@@ -26,7 +26,7 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
-      The purpose of this game is to make users guess a secret number within a certain range. The game gives you hintws to help you find the number
+      The purpose of this game is to make users guess a secret number within a certain range. The game gives you hints to help you find the number
 
 - [ ] Detail which bugs you found.
    When I first ran the game I noticed some bugs. First of all hints were backwards, It would tell me to go higher when the secret number is lower and vice versa. Another bug was that the difficulty setting did not work because the secret number always reset from 1 to 100 when starting you start a new game. I also noticed that the displayed range in the game did not match the selected difficulty( to be specific normal and  hard were switched around).
