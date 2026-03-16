@@ -30,6 +30,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - Did AI help you design or understand any tests? How?
 
 To verify that the code really worked, I tested the code in the Streamlit app to see if guessing the secret number gave you the right response(too high for high and too low for low and congradulating for the same guess). SO, I guessed higher and lower than the secret number to make sure the hints now correctly say "Go LOWER" or "Go HIGHER". I also tested the difficulty setting by switching them between easy, hard and normal then clicking new game to see if it would eventually give me the a secret number outside of the range. Copilot deigned the entire pytest that checks the check guess function. The test verifiyed the basic functionallity by just three tests of too high, too low and a guess that is correct
+
 ---
 
 ## 4. What did you learn about Streamlit and state?
@@ -41,6 +42,7 @@ To verify that the code really worked, I tested the code in the Streamlit app to
 The secret number kept changing in the original because Streamlit reruns the entire script every time the user interacts with the page. So when the code generated the secret number again when it returned, it sometimes changes the original value. I would explain how it reruns to a friend by saying that every time you click a button or enter input, Streamlit runs the whole Python file from top to bottom. To keep important values from resetting each time. Session state acts like memory for the app, letting some values not change/.
 
 The change that made secret number stable was storing it in st.session_state and only getting it if it did not already exist. This stopped the number from being recreated every time the app runs and made the guessing game more consistent.
+
 ---
 
 ## 5. Looking ahead: your developer habits
