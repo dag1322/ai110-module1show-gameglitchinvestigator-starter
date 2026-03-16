@@ -38,6 +38,9 @@ To verify that the code really worked, I tested the code in the Streamlit app to
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 - What change did you make that finally gave the game a stable secret number?
 
+The secret number kept changing in the original because Streamlit reruns the entire script every time the user interacts with the page. So when the code generated the secret number again when it returned, it sometimes changes the original value. I would explain how it reruns to a friend by saying that every time you click a button or enter input, Streamlit runs the whole Python file from top to bottom. To keep important values from resetting each time. Session state acts like memory for the app, letting some values not change/.
+
+The change that made secret number stable was storing it in st.session_state and only getting it if it did not already exist. This stopped the number from being recreated every time the app runs and made the guessing game more consistent.
 ---
 
 ## 5. Looking ahead: your developer habits
@@ -46,3 +49,7 @@ To verify that the code really worked, I tested the code in the Streamlit app to
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+One habit I want to reuse in future projects is testing bugs one step at a time instead of trying to fix everything at once. One thing I would do differently next time when working with AI is being more carefull with accepting what it says(sometimes it confidently lies). Some suggestions looked correct at first but when you really look at it they just added more lines of code
+
+This project changed the way I think about AI-generated code because I learned that AI can help speed up debugging, but it cannot replace programmers like I feared. Developers still need to supervise the code AI writes.
